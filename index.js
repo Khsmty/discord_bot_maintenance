@@ -8,6 +8,10 @@ const client = new Client({
 
 client.on("ready", () => {
   console.log(`${client.user.tag} is ready!`);
+
+  setInterval(() => {
+    client.user.setActivity("⚠️ Under Maintenance | メンテナンス中です");
+  }, 10000);
 });
 
 client.on("messageCreate", async (message) => {
